@@ -660,6 +660,148 @@ h1{font-size:2.25rem;line-height:1.12;font-weight:800;letter-spacing:-.01em;colo
   .valc{min-height:0}
 }
 @media (max-width:860px){#v4 b[data-to]{white-space:nowrap;font-size:1.9rem}#v4 b[data-to]+span{white-space:nowrap}}
+
+/* ===== v3 changes ===== */
+/* p3: no phase column */
+.mtx{grid-template-columns:17rem minmax(0,1.7fr) minmax(0,1fr) minmax(0,1.3fr)!important}
+.mst span:not(.no){display:block;font-size:.84rem;line-height:1.25;color:var(--mut,#5b6b7a);margin-top:.15rem}
+.mh:first-child{grid-column:1}
+/* safe centring: never clip the top of a box when content is taller than the box */
+.trio .card,.ag .viz,.step,.agbox{justify-content:flex-start!important}
+.trio .card>:first-child,.ag .viz>:first-child,.step>:first-child{margin-top:auto}
+.trio .card>:last-child,.ag .viz>:last-child,.step>:last-child{margin-bottom:auto}
+.agbox{overflow:auto;scrollbar-width:thin}
+.agbox>h3{flex:none;margin-bottom:.2rem}
+.agbox>.agb:first-of-type{margin-top:auto}
+.agbox>.agb:last-child{margin-bottom:auto}
+.agb{flex:none}
+.agb.static{cursor:default;background:#fff;border:1px dashed color-mix(in srgb,var(--ac) 55%,#fff);display:flex;align-items:center;gap:.8rem;padding:.9rem 1.1rem;border-radius:1rem;text-align:left}
+.agb.static .bub{flex:none;width:3.2rem;height:3.2rem;border-radius:50%;display:grid;place-items:center;background:var(--ac);color:#fff}
+.agb.static .bub svg{width:1.6rem;height:1.6rem;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.agb.static .tx b{display:block;font-size:1.1rem}.agb.static .tx span{font-size:.95rem;color:#5b6b7a}
+.valc{align-content:start!important}
+.valc>h3{margin-bottom:.9rem}
+.valc>.bg,.valc>.pts{margin-top:auto}
+.valc>div:last-child{margin-bottom:auto}
+.valc .pts{display:flex;flex-direction:column;gap:1rem}
+.valc .pt2{display:flex;align-items:center;gap:1rem}
+.valc .pt2 span{flex:none;width:3.6rem;height:3.6rem;border-radius:50%;background:linear-gradient(135deg,#00A7E4,#006499);display:grid;place-items:center;box-shadow:0 0 0 .35rem rgba(0,167,228,.18);animation:glow 2.6s ease-in-out infinite;animation-delay:calc(var(--d)*.6s)}
+.valc .pt2 svg{width:1.8rem;height:1.8rem;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.valc .pt2 b{font-size:1.35rem;line-height:1.25;font-weight:700;color:#fff}
+/* modal workflow band (Test Lifecycle Agents) */
+.win.hasflow{height:min(57rem,100%);grid-template-rows:auto minmax(0,1fr) auto auto}
+.mflow{display:none}
+.win.hasflow .mflow{display:block;padding:.9rem 1.6rem 1rem;background:linear-gradient(180deg,#fff,#fbf1f5);border-top:1px solid var(--line)}
+.mflow .fh{display:flex;align-items:center;gap:.6rem;margin-bottom:.7rem;color:var(--ac)}
+.mflow .fh svg{width:1.2rem;height:1.2rem;fill:none;stroke:currentColor;stroke-width:1.8}
+.mflow .fh b{font-size:1rem;text-transform:uppercase;letter-spacing:.06em}.mflow .fh span{font-size:.9rem;color:#5b6b7a}
+.fsteps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:1.6rem;position:relative}
+.fsteps .fa{display:none}
+.fs{position:relative;background:#fff;border:1.5px solid color-mix(in srgb,var(--ac) 60%,#fff);border-radius:.9rem;padding:1.5rem .6rem .7rem;text-align:center;display:flex;flex-direction:column;gap:.15rem;grid-row:1;animation:rise .5s both;animation-delay:calc(var(--i)*.08s)}
+.fs:nth-of-type(1){grid-column:1}.fs:nth-of-type(2){grid-column:2}.fs:nth-of-type(3){grid-column:3}.fs:nth-of-type(4){grid-column:4}.fs:nth-of-type(5){grid-column:5}
+.fs:not(:last-of-type)::after{content:"";position:absolute;right:-1.35rem;top:50%;width:1.1rem;height:2px;background:var(--ac)}
+.fs:not(:last-of-type)::before{content:"";position:absolute;right:-1.4rem;top:calc(50% - 4px);border-left:6px solid var(--ac);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.fs .fi{position:absolute;left:50%;top:-1rem;transform:translateX(-50%);width:2rem;height:2rem;border-radius:50%;background:var(--ac);display:grid;place-items:center}
+.fs .fi svg{width:1rem;height:1rem;fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.fs em{font-style:normal;font-weight:800;font-size:1.05rem;color:var(--ac)}
+.fs b{font-size:.98rem;line-height:1.15}.fs small{font-size:.82rem;line-height:1.25;color:#5b6b7a}
+.fent{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:1.6rem;margin-top:.7rem;row-gap:.3rem}
+.fe{display:flex;align-items:center;gap:.6rem;background:#fff;border:1.5px solid #E44500;border-radius:.9rem;padding:.55rem .8rem;position:relative}
+.fe1{grid-column:1/3}.fe4{grid-column:4/6}
+.fe>i{position:absolute;top:-.75rem;left:calc(50% - 1px);height:.75rem;border-left:2px solid #E44500}
+.fe .fei{flex:none;width:2rem;height:2rem;border-radius:50%;background:#E44500;display:grid;place-items:center}
+.fe .fei svg{width:1rem;height:1rem;fill:none;stroke:#fff;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.fe b{display:block;font-size:.92rem;line-height:1.15}.fe small{font-size:.82rem;color:#5b6b7a}
+.fe1>i{left:calc(25% - 1px)}
+.fent p{grid-column:1/-1;font-size:.84rem;color:#5b6b7a;margin-top:.2rem}
+@media (max-width:860px){
+  .win.hasflow{height:100%}
+  .fsteps,.fent{grid-template-columns:1fr!important;row-gap:1rem}
+  .fs{grid-column:auto!important;grid-row:auto!important}
+  .fs:not(:last-of-type)::after,.fs:not(:last-of-type)::before{display:none}
+  .fe1,.fe4{grid-column:auto!important}.fe>i{display:none}
+}
+/* compact agent rows so two agents always fit */
+@media (min-width:861px){
+.agbox{gap:.5rem!important;padding:.9rem 1.2rem!important}
+.agbox .agb,.agb.static{padding:.5rem .9rem!important;gap:.7rem!important}
+.agb.static .bub{width:2.4rem;height:2.4rem}.agb.static .bub svg{width:1.2rem;height:1.2rem}
+.agbox .agb .bub{width:2.4rem;height:2.4rem;flex:none}
+.agb.static .tx b,.agbox .agb .tx b{font-size:1rem}.agb.static .tx span,.agbox .agb .tx span{font-size:.85rem}
+}
+.win.hasflow .wb{overflow:auto}
+@media (max-width:860px){
+.win.hasflow{grid-template-rows:auto auto auto auto!important;grid-template-columns:minmax(0,1fr)!important;overflow:auto}
+.win.hasflow>*{min-width:0}
+.win.hasflow .wb{overflow:visible;grid-template-columns:minmax(0,1fr)!important;height:auto}
+.win.hasflow .mflow{padding:.9rem 1rem 1rem}
+}
+@media (max-width:860px){.win.hasflow .wb{grid-template-rows:none!important;grid-auto-rows:max-content}.win.hasflow .wb>*{overflow:visible!important;height:auto!important;min-height:max-content}}
+@media (max-width:860px){
+.win.hasflow{display:flex!important;flex-direction:column;overflow-y:auto}
+.win.hasflow>*{flex:none!important}
+.win.hasflow .wb{display:block!important;height:auto!important;max-height:none!important}
+.win.hasflow .wb>*{display:block!important}
+}
+
+/* ===== v3.1 polish ===== */
+/* value box: centre text against the big figure */
+.valc:not(.hpts){grid-template-rows:auto minmax(0,1fr);align-content:stretch!important}
+.valc>.bg{margin:0!important;align-self:center}
+.valc>div:last-child{margin:0!important;align-self:center}
+.valc>.pts{margin:0!important;align-self:center;grid-column:1/3}
+.valc .bl.hd{margin-bottom:.2rem}
+/* p3 matrix: breathing room, no protruding rows */
+.mtx{grid-template-columns:14.5rem minmax(0,2.1fr) minmax(0,.85fr) minmax(0,1.5fr)!important;overflow:auto;padding:.2rem .2rem .5rem 0;align-content:stretch;grid-auto-rows:minmax(min-content,1fr);scrollbar-width:thin}
+.mtx>.mh{grid-row:1;grid-auto-rows:auto}
+.mst,.mc{margin-bottom:.1rem}
+.mc{align-items:center;padding:.3rem .5rem!important}
+@media (max-height:760px){.mst span:not(.no){display:none!important}}
+/* p5 agent cards: tidy visuals */
+.ag .viz{justify-content:flex-start!important;gap:.35rem;padding-top:.5rem}
+.ag .vcol .vc{padding:.3rem .6rem!important}
+.ag .vcol .vcn{height:.22rem}
+.ag .vnote{align-items:flex-start;line-height:1.25;margin-top:.45rem}
+.ag .vnote .ic{flex:none;margin-top:.1rem}
+.agents{padding-bottom:.2rem}
+/* workflow modal */
+.mflow .fh{margin-bottom:1.5rem!important}
+.mflow{padding-top:1.1rem!important}
+.fe4>i{left:calc(25% - 1px)!important}
+.fent{margin-top:.9rem}
+.fe>i{top:-.9rem;height:.9rem}
+.ag .viz>:first-child{margin-top:0!important}.ag .viz>:last-child{margin-bottom:0!important}
+.trio .card>:first-child,.trio .card>:last-child{margin-top:0!important;margin-bottom:0!important}
+.trio .card>h3,.trio .card>.hd{margin-bottom:.9rem}
+/* spacing polish */
+.card .st,.big{margin-top:.6rem!important;line-height:1.08}
+.trio .card h3{margin-bottom:1rem!important}
+.pil b{display:block}.pil span:not(.bub){display:block;margin-top:.2rem;line-height:1.25}
+.jpc{padding:1.1rem 1.2rem;gap:1rem}
+.jpc .tx>span{margin-top:.25rem;line-height:1.25}
+.ag-ch{gap:.4rem;margin-top:.65rem}
+.ag-ch i{padding:.22rem .65rem;line-height:1.25}
+.jp-h{margin-bottom:.8rem}
+.trow>small{padding:0 1.4rem 0 1.2rem}
+.mst span:not(.no){display:none!important}
+.step ul{align-content:flex-start!important;justify-content:flex-start!important;flex:none!important}
+.step{justify-content:flex-start!important}
+.step>:first-child,.step>:last-child{margin-top:0!important;margin-bottom:0!important}
+.step>h3{margin-bottom:1rem!important}
+.step ul{margin-top:1.1rem!important}
+/* fallback for browsers without color-mix() (older Safari / Firefox) */
+@supports not (background:color-mix(in srgb,red,blue)){
+.ag .ban{background:var(--ac)}
+.vc{background:#eef4fa!important}
+.ag .tg,.ag-ch i{background:#eef3f8!important;border-color:#c9d6e2!important}
+.agb.static{border-color:#c9d3dc}
+.fs{border-color:#d8a9bb}
+.trio::before{background:none}
+}
+/* fixed-height animated bars so they never nudge the layout */
+.hero .eq{height:1.4rem;align-items:flex-end;flex:none}
+.wave{contain:layout size;overflow:hidden}
+@media (max-width:860px){.wave{height:7rem;flex:none}}
 </style></head><body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.4-6.5-10.2a6.5 6.5 0 0113 0C18.5 15.6 12 21 12 21z"/><circle cx="12" cy="10.8" r="2.3"/></symbol>
@@ -839,6 +981,7 @@ h1{font-size:2.25rem;line-height:1.12;font-weight:800;letter-spacing:-.01em;colo
         <div class="col c2"><h4><svg class="ic"><use href="#i-warn"/></svg>Pain points</h4><ul id="mPain"></ul></div>
         <div class="col c3"><h4><svg class="ic"><use href="#i-trend"/></svg>Benefits</h4><ul id="mBen"></ul></div>
       </div>
+      <div class="mflow" id="mFlow" hidden></div>
       <div class="wf"><div class="nv"><button class="nb" id="mPrev" aria-label="Previous agent"><svg class="ic"><use href="#i-arrowl"/></svg></button><button class="nb" id="mNext" aria-label="Next agent"><svg class="ic"><use href="#i-arrow"/></svg></button></div>
         <span class="cnt" id="mCnt"></span>
         <div class="used" id="mUsed"></div>
@@ -920,16 +1063,16 @@ const AGENTS=[
   what:['Accelerated As-Is analysis of processes, customization and landscape, with To-Be recommendations.','Reads the SAP system non-invasively, with no add-ons or plugins installed.','Looks through six lenses: business, landscape, custom code, compatibility, security and timeline.'],
   pain:['Assessment still relies heavily on manual effort (about 85%), even with tools','Complexity, technical debt and risk are often visible only once the project is under way','Scope, duration and team size benefit from evidence taken directly from the system'],
   ben:['65% faster system discovery','Automated custom code mining','75% cost savings in SAP system assessment']},
+ {id:'wricef',stage:'Document',name:'WRICEF Reverse Engineering Agent',i:'doc',c:'#5B4BC4',proj:'qlik',
+  short:'Auto-generation of detailed documentation for all custom objects',
+  what:['Auto-generation of detailed documentation for all custom objects.','Speeds up understanding of the customization and the kick-off of remediation.','Each document pack covers functional and technical documentation, test cases and dependency mapping.'],
+  pain:['Knowledge of custom objects is often concentrated in a few experts','Technical debt is a major driver of cost overruns in SAP upgrades (about 40%)','Onboarding new consultants onto custom objects takes time'],
+  ben:['90% reduction in documentation time','5x faster onboarding for new consultants','100% automated: processes, objects, dependencies','60% cost savings in SAP modernization']},
  {id:'analytics',stage:'Document',name:'Analytics Reverse Engineering Agent',i:'chart',c:'#1F78C1',proj:'qlik',
   short:'Auto-generation of end-to-end data lineage & retrofit insights for the analytics landscape',
   what:['Auto-generation of end-to-end data lineage and retrofit insights for the analytics landscape.','Specialised agents walk the chain layer by layer: Qlik, Snowflake, Matillion, SNP Glue and SAP ECC.','Each agent completes its layer and hands a verified result to the next one.'],
   pain:['Report dependencies on SAP tables are hard to see before conversion scope is frozen','Data flows across several tools, so end-to-end knowledge is spread across teams','Tracing a reported figure back to its SAP source takes significant manual effort'],
   ben:['A KPI traced to the exact SAP field behind it, automatically','Every layer between a dashboard number and its SAP source made traceable','Impact of an SAP change visible up front, before any report is touched']},
- {id:'wricef',stage:'Document',name:'WRICEF Reverse Engineering Agent',i:'doc',c:'#5B4BC4',proj:'eos',
-  short:'Auto-generation of detailed documentation for all custom objects',
-  what:['Auto-generation of detailed documentation for all custom objects.','Speeds up understanding of the customization and the kick-off of remediation.','Each document pack covers functional and technical documentation, test cases and dependency mapping.'],
-  pain:['Knowledge of custom objects is often concentrated in a few experts','Technical debt is a major driver of cost overruns in SAP upgrades (about 40%)','Onboarding new consultants onto custom objects takes time'],
-  ben:['90% reduction in documentation time','5x faster onboarding for new consultants','100% automated: processes, objects, dependencies','60% cost savings in SAP modernization']},
  {id:'ccr',stage:'Remediate',name:'Custom Code Remediation Agent',i:'code',c:'#0E9F6E',proj:'eos',
   short:'Auto-remediation of all custom code',
   what:['Auto-remediation of all custom code.','Works directly in the SAP system through ADT, with a human approval for each object and an audit trail.','Identifies issues, remediates and estimates effort in one flow.'],
@@ -939,9 +1082,13 @@ const AGENTS=[
   short:'Generation, execution and governance, handled together as one set of test lifecycle agents',
   what:['Generation, execution and governance handled together, as one set of test lifecycle agents.','Generates test cases, scripts and data from a design document, written to your template, or starts from your own test cases.','Runs the chosen cases in the live app, with a screenshot for every step, and keeps plans, cases, evidence and defects in one cockpit.'],
   pain:['Test cases are typically authored manually, one at a time, and style varies between authors','Executing tests and capturing evidence requires significant manual effort','Test plans, cases, evidence and defects can be hard to trace to each other, with limited tooling designed for SAP UAT'],
+  flow:{steps:[['doc','Design document','Requirements, BRD or process diagrams'],['layers','Solution design','Structured design written by the AI'],['book','Test cases and scripts','Reviewed workbook in your template'],['bolt','Automated web execution','Steps run in the live app'],['eye','Evidence report','Pass or fail per step, with screenshots']],entries:[[1,'doc','Entry point: start from a document','Bring requirements or a solution design'],[4,'book','Entry point: bring your own test cases','Go straight to automated execution']],note:'Each stage hands a checked result to the next one.'},
   ben:['Works with or without a solution design document: start from requirements or bring your own test cases','Consistent test sets: same rules and structure on every project, steps ready for automated execution','Pass or fail with a screenshot for every step, summarised in an evidence report','45% reduction in test cycle time, with 100% traceability across plans, cases and defects']}
 ];
 const AG=Object.fromEntries(AGENTS.map(a=>[a.id,a]));
+/* label-only agents: shown as a box, no detail window */
+const MINI={impact:{id:'impact',name:'Impact Assessment Agent',i:'search',c:'#C77D0A',note:'Impact of the change on custom objects'}};
+const agOf=id=>AG[id]||MINI[id];
 
 const PROJECTS=[
  {id:'qlik',t:'Qlik data lineage and retrofit',s:'Analytics lineage',i:'chart',
@@ -949,21 +1096,21 @@ const PROJECTS=[
   chal:['Reporting logic spans several layers: data is fetched, filtered and transformed before a few fields are shown','Documentation of that logic was limited, which made it hard to trace end to end'],
   step:['Traced each report\'s logic end to end, from dashboard field to SAP source table','KTern.AI agents now retrofit the logic'],
   chain:['Dashboard field','Qlik','Snowflake','Matillion','SNP Glue','SAP source table'],chainNote:'Traced end to end',
-  val:{big:'100+',sub:'reports documented',lines:['Logic documented and retrofitted with Human in the Loop']},
-  agents:['analytics']},
+  val:{big:'100+',sub:'Reports',lines:['Logic documented and retrofitted with Human in the Loop']},
+  agents:['wricef','analytics']},
  {id:'eos',t:'EOS remediation',s:'Organization structure change',i:'refresh',
   start:['An enterprise-level organization structure change (EOS) as part of the move to S/4HANA'],
   chal:['EOS code remediation sat outside the scope of the existing tooling','The impact of EOS changes on custom objects needed a dedicated approach'],
   step:['Assessed the affected objects at table and field level','Built functional design documents using Reverse Engineering Agents','Remediated the objects with AI'],
   chain:['Affected objects','Table and field assessment','Functional design documents','Remediated with AI'],chainNote:'From impact to fix',
-  val:{big:'60%',sub:'Affected objects remediated by AI',lines:[]},
-  agents:['wricef','ccr']},
+  val:{big:'60%',sub:'effort reduction in remediation',lines:[]},
+  agents:['impact','ccr']},
  {id:'test',t:'Testing automation',s:'Regression at scale',i:'shield',
   start:['A transformation build running across a very large landscape','Everything that is built has to be tested'],
   chal:['The volume of testing exceeded the available manual testing capacity','The program also needed testing governance and an audit trail'],
   step:['Introduced automated regression testing alongside the build, with every run evidenced','Covers automatic test scenario identification, test case creation and execution'],
   chain:['Scenario identification','Test case creation','Execution','Evidence and audit trail'],chainNote:'Every run evidenced',
-  val:{big:'Automated',sub:'Automated regression testing',lines:['A full audit trail for every test run'],vis:[['scan','Scenarios identified'],['bolt','Tests executed'],['shield','Audit trail kept']]},
+  val:{big:'',sub:'Automated regression testing, with an audit trail',lines:[],pts:[['bolt','Regression testing automated alongside the build'],['shield','A full audit trail for every test run']]},
   agents:['test']}
 ];
 
@@ -1070,23 +1217,18 @@ $$('#dots b').forEach((d,i)=>{d.onclick=()=>go(i);d.onkeydown=e=>{if(e.key==='En
 
 /* ---- page 3: the whole portfolio in one view ---- */
 (function(){
-  const PH=[{n:'LAND',s:'(Assessment)',d:'Enter the account by discovering where AI creates baseline value.',c:'#E44500',r:[1,1]},
-            {n:'EXPAND',s:'(Plan + Build)',d:'Attach transformation delivery and accelerate engineering.',c:'#9D0102',r:[2,3]},
-            {n:'EMBED',s:'(Run + Integrations + Data)',d:'Expand the operational footprint and drive governance.',c:'#101B26',r:[4,6]},
-            {n:'SCALE',s:'(Infra / Network / Security)',d:'Extend the KTern.AI neural network across the broader technology estate.',c:'#7d8791',r:[7,7]}];
-  const W=[.8,1.05,1.75,1.65,1,1.1,.85];
+  const W=[1,1.1,1.6,1.55,1,1.1,.9];
   const m=$('#mtx');
   m.style.gridTemplateRows='auto '+W.map(w=>`minmax(0,${w}fr)`).join(' ');
-  let h=`<div class="mh">Phase</div><div class="mh">Lifecycle stage</div><div class="mh">Current / production</div><div class="mh">Existing pipeline</div><div class="mh">Future roadmap</div>`;
-  PH.forEach((p,i)=>{h+=`<div class="mph rise${p.r[0]==p.r[1]?" s1":""}" style="grid-column:1;grid-row:${p.r[0]+1}/${p.r[1]+2};--pc:${p.c};--d:${i+2}"><em>${p.s}</em><b>${p.n}</b><span>${p.d}</span></div>`});
+  let h=`<div class="mh">Lifecycle stage</div><div class="mh">Current / production</div><div class="mh">Existing pipeline</div><div class="mh">Future roadmap</div>`;
   let k=0;
   LIFE.forEach((s,i)=>{
     const row=i+2, f=s.f.map(a=>`<button class="chip f" data-a="${FEAT2AGENT[a]}">${ic('star')}${a}<i>${ic('arrow')}</i></button>`).join('');
     const ch=(arr,c)=>arr.map(a=>`<span class="chip ${c}">${a}</span>`).join('');
-    h+=`<div class="mst rise" title="${s.d}" style="grid-row:${row};--d:${i+2}"><span class="no">${s.n}</span><div><b>${s.t}</b><span>${s.d}</span></div></div>
-        <div class="mc rise" data-l="Current / production" style="grid-row:${row};grid-column:3;--d:${i+2}"><div class="chips">${f}${ch(s.p,'')}${s.f.length+s.p.length?'':'<span class="none">None</span>'}</div></div>
-        <div class="mc rise" data-l="Existing pipeline" style="grid-row:${row};grid-column:4;--d:${i+2}"><div class="chips">${ch(s.l,'pl')||'<span class="none">None</span>'}</div></div>
-        <div class="mc rise" data-l="Future roadmap" style="grid-row:${row};grid-column:5;--d:${i+2}"><div class="chips">${ch(s.r,'rm')||'<span class="none">None</span>'}</div></div>`;
+    h+=`<div class="mst rise" style="grid-row:${row};--d:${i+2}"><span class="no">${s.n}</span><div><b>${s.t}</b><span>${s.d}</span></div></div>
+        <div class="mc rise" data-l="Current / production" style="grid-row:${row};grid-column:2;--d:${i+2}"><div class="chips">${f}${ch(s.p,'')}${s.f.length+s.p.length?'':'<span class="none">None</span>'}</div></div>
+        <div class="mc rise" data-l="Existing pipeline" style="grid-row:${row};grid-column:3;--d:${i+2}"><div class="chips">${ch(s.l,'pl')||'<span class="none">None</span>'}</div></div>
+        <div class="mc rise" data-l="Future roadmap" style="grid-row:${row};grid-column:4;--d:${i+2}"><div class="chips">${ch(s.r,'rm')||'<span class="none">None</span>'}</div></div>`;
   });
   m.innerHTML=h;
   $$('.chip.f',m).forEach((c,i)=>{c.style.setProperty('--k',i);c.onclick=()=>openAgent(c.dataset.a,'v3')});
@@ -1109,7 +1251,7 @@ $$('#dots b').forEach((d,i)=>{d.onclick=()=>go(i);d.onkeydown=e=>{if(e.key==='En
    <g><rect x="562" y="68" width="168" height="110" rx="20" fill="url(#s4g)"/><text x="646" y="115" text-anchor="middle" fill="#fff" font-size="28" font-weight="800" font-family="var(--head)">SAP</text><text x="646" y="146" text-anchor="middle" fill="#d9ecf8" font-size="20" font-weight="700" font-family="var(--head)">S/4HANA</text></g>
    <g transform="translate(370 123)"><rect x="-92" y="-19" width="184" height="38" rx="19" fill="#fff" stroke="#9CC4E0" stroke-width="1.5"/><text y="5" text-anchor="middle" fill="#1B2A38" font-size="15" font-weight="800" font-family="var(--head)">Bluefield migration</text></g>`;
   // project cards: each shows the agents behind it
-  $('#jpGrid').innerHTML=PROJECTS.map((p,i)=>`<button class="jpc" data-i="${i}"><span class="bub">${ic(p.i)}</span><div class="tx"><b>${p.t}</b><span>${p.s}</span><div class="ag-ch">${p.agents.map(id=>`<i style="--ac:${AG[id].c}">${AG[id].name}</i>`).join('')}</div></div><span class="go">${ic('arrow')}</span></button>`).join('');
+  $('#jpGrid').innerHTML=PROJECTS.map((p,i)=>`<button class="jpc" data-i="${i}"><span class="bub">${ic(p.i)}</span><div class="tx"><b>${p.t}</b><span>${p.s}</span><div class="ag-ch">${p.agents.map(id=>`<i style="--ac:${agOf(id).c}">${agOf(id).name}</i>`).join('')}</div></div><span class="go">${ic('arrow')}</span></button>`).join('');
   $$('#jpGrid .jpc').forEach(b=>b.onclick=()=>{window.setProj(+b.dataset.i);go(5)});
 })();
 (function(){const w=$('#wave');let h='';for(let k=0;k<46;k++){const v=30+60*Math.abs(Math.sin(k*.55)*Math.cos(k*.23+1));h+=`<i style="--h:${v.toFixed(0)};--k:${k}"></i>`}w.innerHTML=h})();
@@ -1163,9 +1305,9 @@ function countUp(root){
      <div class="chainband swap" style="animation-delay:.18s"><small>${p.chainNote}</small><div class="crow">${nodes}</div></div>
      <div class="bottom">
       <div class="valc swap" style="animation-delay:.22s"><div class="rg"><i></i><i style="animation-delay:-1.7s"></i><i style="animation-delay:-3.4s"></i></div><h3>${ic('trend')}Value delivered</h3>
-        ${p.val.vis?`<div class="vis">${p.val.vis.map((v,k)=>`<div class="vi" style="--d:${k}"><span>${ic(v[0])}</span><em>${v[1]}</em></div>${k<2?'<i class="va"></i>':''}`).join('')}</div>`:`<div class="bg ${sm?'sm':''}">${bigH}</div>`}<div><div class="bl hd">${p.val.sub}</div>${p.val.lines.map(l=>`<div class="bl">${l}</div>`).join('')}</div></div>
+        ${p.val.pts?`<div class="pts">${p.val.pts.map((v,k)=>`<div class="pt2" style="--d:${k}"><span>${ic(v[0])}</span><b>${v[1]}</b></div>`).join('')}</div>`:`<div class="bg ${sm?'sm':''}">${bigH}</div>`}<div>${p.val.pts?'':`<div class="bl hd">${p.val.sub}</div>`}${p.val.lines.map(l=>`<div class="bl">${l}</div>`).join('')}</div></div>
       <div class="agbox swap" style="animation-delay:.28s"><h3><img src="${IMG.ktern_c}" alt="KTern.AI">agents behind this project</h3>
-        ${p.agents.map(id=>{const a=AG[id];return `<button class="agb" style="--ac:${a.c}" data-a="${id}"><span class="bub">${ic(a.i)}</span><span class="tx"><b>${a.name}</b><span>Open what it does, pain points and benefits</span></span><span class="go">${ic('chev')}</span></button>`}).join('')}</div>
+        ${p.agents.map(id=>{const a=agOf(id);const mini=!AG[id];return mini?`<div class="agb static" style="--ac:${a.c}"><span class="bub">${ic(a.i)}</span><span class="tx"><b>${a.name}</b><span>${a.note}</span></span></div>`:`<button class="agb" style="--ac:${a.c}" data-a="${id}"><span class="bub">${ic(a.i)}</span><span class="tx"><b>${a.name}</b><span>Open what it does, pain points and benefits</span></span><span class="go">${ic('chev')}</span></button>`}).join('')}</div>
      </div>`;
     countUp($('#pj'));
     $$('#pj .agb').forEach(b=>b.onclick=()=>openAgent(b.dataset.a,'v6'));
@@ -1181,7 +1323,7 @@ function viz(id,lg){
     h='<div class="vlens">'+[['Business','users'],['Landscape','layers'],['Custom code','code'],['Compatibility','refresh'],['Security','shield'],['Timeline','cal']].map((x,k)=>c(x[0],x[1],k)).join('')+'</div><div class="vnote">'+ic('eye')+'Six lenses on one non-invasive read</div>';
   }else if(id==='analytics'){
     const n=['Dashboards and reports','Data platform','Transformation and loading','Data replication','SAP source tables'];
-    h='<div class="vcol">'+n.map((t,k)=>(k?'<i class="vcn"></i>':'')+c(t,'db',k)).join('')+'</div><div class="vnote">'+ic('check')+'Each layer hands a verified result on</div>';
+    h='<div class="vcol">'+n.map((t,k)=>(k?'<i class="vcn"></i>':'')+c(t,'db',k)).join('')+'</div><div class="vnote">'+ic('check')+'Each layer hands off a verified result</div>';
   }else if(id==='wricef'){
     h='<div class="vlens">'+['Functional documentation','Technical documentation','Test cases','Dependency mapping'].map((t,k)=>c(t,'doc',k)).join('')+'</div><div class="vnote">'+ic('box')+'One document pack per custom object</div>';
   }else if(id==='ccr'){
@@ -1199,7 +1341,9 @@ function renderAgent(i,dir){
   $('#win').style.setProperty('--ac',a.c);
   $('#mIco').innerHTML=`<use href="#i-${a.i}"/>`;$('#mTag').textContent=a.stage;$('#mName').textContent=a.name;
   $('#mWhat').innerHTML=a.what.map((t,k)=>`<li style="--i:${k}">${ic('checkc')}<span>${t}</span></li>`).join('');
-  $('#mViz').innerHTML=viz(a.id,true);
+  $('#mViz').innerHTML=a.flow?'':viz(a.id,true);
+  const fl=$('#mFlow');fl.hidden=!a.flow;$('#win').classList.toggle('hasflow',!!a.flow);
+  if(a.flow){const F=a.flow;fl.innerHTML=`<div class="fh">${ic('flow')}<b>Basic workflow</b><span>One end-to-end flow</span></div><div class="fsteps">${F.steps.map((s,k)=>`<div class="fs" style="--i:${k}"><span class="fi">${ic(s[0])}</span><em>${k+1}</em><b>${s[1]}</b><small>${s[2]}</small></div>${k<F.steps.length-1?'<i class="fa"></i>':''}`).join('')}</div><div class="fent">${F.entries.map(e=>`<div class="fe fe${e[0]}"><i></i><span class="fei">${ic(e[1])}</span><div><b>${e[2]}</b><small>${e[3]}</small></div></div>`).join('')}<p>${F.note}</p></div>`}
   $('#mPain').innerHTML=a.pain.map((t,k)=>`<li style="--i:${k}">${ic('warn')}<span>${t}</span></li>`).join('');
   $('#mBen').innerHTML=a.ben.map((t,k)=>{
     const m=t.match(/^(\d[\d,.]*(?:x|%)?)\s+(.*)$/);
@@ -1249,14 +1393,16 @@ function show(n){
   try{history.replaceState(null,'','#p'+(n+1))}catch(e){try{location.hash='p'+(n+1)}catch(e2){}}
   refreshSub();
 }
+let pend=null;
 function go(n){
   n=Math.max(0,Math.min(PAGES.length-1,n));
-  if(n===cur||busy)return;
+  if(busy){pend=n;return;}
+  if(n===cur)return;
   if(reduce||cur<0){show(n);return;}
   busy=true;const w=$('#wipe'),wi=$('#wipeImg');
   wi.src=PAGES[n].sec==='h'?IMG.harman_w:IMG.ktern_w;
   w.className='wipe in';
-  setTimeout(()=>{show(n);w.className='wipe out';setTimeout(()=>{w.className='wipe reset';busy=false},460)},400);
+  setTimeout(()=>{show(n);w.className='wipe out';setTimeout(()=>{w.className='wipe reset';busy=false;if(pend!==null&&pend!==cur){const q=pend;pend=null;go(q)}else pend=null},460)},400);
 }
 window.go=go;
 $('#next').onclick=()=>cur===PAGES.length-1?go(0):go(cur+1);
